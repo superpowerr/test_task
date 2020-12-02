@@ -1,0 +1,203 @@
+@keyframes render {
+  0% {
+    stroke-dasharray: 10 100;
+  }
+}
+
+@font-face { 
+  font-family: "Gotham Pro";
+  src: url(/fonts/GothamPro.eot) format("eot"), 
+       url(/fonts/GothamPro.woff) format("woff"), 
+       url(/fonts/GothamPro.woff2) format("woff2"), 
+       url(/fonts/GothamPro.ttf) format("truetype");
+}
+
+body {
+  font-family: "Gotham Pro", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(0, 0, 0);
+}
+
+.canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.loyalty {
+  margin-top:50px;
+  margin-left: -40px;
+  fill:#a0979ead
+}
+
+.chart {
+  margin-top: -90px;
+}
+
+.donut-hole {
+  fill: transparent;
+}
+
+.donut-segment {
+  fill: transparent;
+  stroke-width: 1;
+  stroke-linecap: round;
+  animation-name: render;
+  animation-duration: 1.5s;
+  transition-property: all; 
+  transition-duration: 0.5s;
+}
+
+.donut-segment:hover {
+  stroke-width: 1.2;
+}
+
+.part1 {
+  stroke:#e6d706;
+  stroke-dasharray: 31 85;
+  stroke-dashoffset: 20;
+}
+
+
+.part2 {
+  stroke:#0c8316bb;
+  stroke-dasharray: 35 85;
+  stroke-dashoffset: -11;
+}
+
+.part3 {
+  stroke:#ddd4da;
+  stroke-dasharray: 36 71;
+  stroke-dashoffset: 62;
+}
+
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: -366px;
+}
+
+.description__number {
+  display: block;
+  position: relative;
+  font-size: 72px;
+  color: rgb(61, 65, 70);
+}
+
+
+.description__index {
+  position: absolute;
+  font-size: 0.5em;
+}
+
+.index__bottom { 
+  font-size: 0.5em;
+  bottom: 7px;
+}
+
+.description__text {
+  font-size: 33px;
+  margin-bottom: 5px;
+}
+
+.description_yellow {
+  font-size: 24px;
+  color: #e6d706;
+}
+
+.description__small {
+  opacity: 0.6;
+  max-width: 240px;
+  margin-bottom: 15px;
+}
+
+
+.description__rating:before {
+  content: url('../assets/arrow.svg');
+  position: absolute;
+  left: 90px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.description__rating {
+  position: relative;
+  color: #0c8316bb;
+  font-size: 20px;
+}
+
+.rait {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -150px;
+  margin-top: 100px;
+  font-size: 21px;
+}
+
+.rait__promoter {
+  display: flex;
+  flex-direction: column;
+}
+
+.rait__semibold {
+  font-weight: 580;
+}
+
+.rait__small {
+  position: relative;
+  margin-top: 3px;
+  margin-left: 168px;
+  opacity: 0.6;
+}
+
+.rait__small:after {
+  content: url('../assets/human_full.svg');
+  position: absolute;
+  width: 16px;
+  height: 16px;
+}
+
+.rait__block {
+  display: flex;
+  justify-content: flex-end;
+  align-items:center;
+  position: relative;
+  width: 260px;
+  height: 50px;
+  border: 0.3px solid #ccc;
+  border-radius: 10px;
+  background-color: #b8cddf3a;
+  margin-left: 80px;
+  overflow: hidden;
+}
+
+.rait__block:before {
+  content: '';
+  position: absolute;
+  background-color: rgb(30, 136, 70);
+  width: 45px;
+  height: 39px;
+  left: 0;
+  top: 0;
+}
+.rait__block:after {
+  content: '';
+  position: absolute;
+  background-color: rgba(137, 207, 115, 0.76);
+  width: 38px;
+  height: 12px;
+  left: 0;
+  bottom: 0;
+}
+
+.rait__percent {
+  margin-bottom: 5px;
+}
+
